@@ -33,12 +33,17 @@ missing, and lets you toggle a single skill without editing anything but its ent
 
 ## Install (from source, for now)
 
-Not on npm yet. Until the first release, mount the working tree into a profile with a local link:
+Not on npm yet. Until the first release, clone this repository and mount the working tree into a
+profile with a local link:
+
+```bash
+git clone https://github.com/zhaorui-wu/dsh-skill-cockpit.git
+```
 
 ```jsonc
 // ~/.dsh/profiles/<profile>/package.json
 {
-  "dependencies": { "dsh-skill-cockpit": "link:/path/to/this/repo" },
+  "dependencies": { "dsh-skill-cockpit": "link:/path/to/dsh-skill-cockpit" },
   "dsh": { "profile": { "bundles": ["…", "dsh-skill-cockpit"] } }
 }
 ```

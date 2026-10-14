@@ -11,6 +11,15 @@
     "skill-cockpit"
   ],
   "license": "MIT",
+  "author": "zhaorui-wu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaorui-wu/dsh-skill-cockpit.git"
+  },
+  "homepage": "https://github.com/zhaorui-wu/dsh-skill-cockpit#readme",
+  "bugs": {
+    "url": "https://github.com/zhaorui-wu/dsh-skill-cockpit/issues"
+  },
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
