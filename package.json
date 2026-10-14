@@ -1,6 +1,6 @@
 {
   "name": "dsh-skill-cockpit",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Skill cockpit for DSH: one page in the app-level nav (official sidebar.panellist seat, order 5) that lists every skill this machine actually exposes (all six skill-root kinds, not just ~/.dsh/skills), explains why a skill is invisible (dropped:* / missing root / disabled), and toggles a single skill by renaming its entry file only (SKILL.md → SKILL.md.disabled); project-level skill roots stay read-only. 技能中心：导航栏加一页，列出本机实际暴露的全部技能，说明某技能为何不可见，并可通过只改入口文件名单独启停；项目级技能根只读。",
   "keywords": [
     "dsh",
