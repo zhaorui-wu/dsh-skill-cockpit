@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "技能面板",
+    "description": "技能中心：在导航栏加一页（官方 sidebar.panellist 槽位，order 5，位于「插件」与「自动化任务」之间），列出本机实际暴露的全部技能（六类技能根，不只是 ~/.dsh/skills），说明某技能为何不可见（dropped:* / 根缺失 / 已禁用），并可通过只改入口文件名（SKILL.md → SKILL.md.disabled）单独启停一个技能；项目级技能根只读。"
+  }
+}

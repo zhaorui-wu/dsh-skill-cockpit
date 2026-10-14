@@ -1,18 +1,14 @@
 {
-  "name": "dsh-skill-panel",
+  "name": "dsh-skill-cockpit",
   "version": "0.2.2",
-  "title": {
-    "en": "Skill Panel",
-    "zh": "技能面板"
-  },
-  "description": "技能中心：在导航栏加一页（官方 sidebar.panellist 槽位，order 5，位于「插件」与「自动化任务」之间），列出本机实际暴露的全部技能（六类技能根，不只是 ~/.dsh/skills），说明某技能为何不可见（dropped:* / 根缺失 / 已禁用），并可通过只改入口文件名（SKILL.md → SKILL.md.disabled）单独启停一个技能；项目级技能根只读。",
+  "description": "Skill cockpit for DSH: one page in the app-level nav (official sidebar.panellist seat, order 5) that lists every skill this machine actually exposes (all six skill-root kinds, not just ~/.dsh/skills), explains why a skill is invisible (dropped:* / missing root / disabled), and toggles a single skill by renaming its entry file only (SKILL.md → SKILL.md.disabled); project-level skill roots stay read-only. 技能中心：导航栏加一页，列出本机实际暴露的全部技能，说明某技能为何不可见，并可通过只改入口文件名单独启停；项目级技能根只读。",
   "keywords": [
     "dsh",
     "dsh-plugin",
     "dsh-bundle",
     "skills",
     "panellist",
-    "skill-panel"
+    "skill-cockpit"
   ],
   "license": "MIT",
   "type": "module",
@@ -24,10 +20,12 @@
     "./client": {
       "default": "./lib/client.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "files": [
     "lib",
+    "locale",
     "test",
     "cordis.patch.yml",
     "README.md"

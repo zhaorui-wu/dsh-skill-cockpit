@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.11'
+      - name: Syntax check (host + client halves, library modules)
+        run: |
+          for f in lib/*.js; do node --check "$f"; done
+          node --check test/run-all.mjs
+      - name: Self-test suites
+        run: node test/run-all.mjs

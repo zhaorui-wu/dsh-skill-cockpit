@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Skill Panel",
+    "description": "Skill center: adds a nav row (official sidebar.panellist slot, order 5, between Plugins and Scheduled tasks) listing every skill this machine actually exposes (all six skill-root kinds, not just ~/.dsh/skills), explaining why a skill is invisible (dropped:* / root-missing / disabled), and toggling a single skill by renaming only its entry file (SKILL.md -> SKILL.md.disabled). Read-only for project-level roots."
+  }
+}
