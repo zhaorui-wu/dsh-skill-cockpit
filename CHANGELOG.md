@@ -7,15 +7,33 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 Public repository opened to reserve the name **`dsh-skill-cockpit`**. The plugin is functional but
-the first public release is still being prepared: bilingual docs, screenshots, packaging metadata,
-and a release checklist are outstanding.
+the first public release is still being prepared: bilingual docs, screenshots, and a release
+checklist are outstanding.
 
 ### Known gaps at this point
 
 - `README.md` (English) is a stub; the full bilingual documentation is not written yet.
 - No screenshots yet.
-- Not published to npm. `repository` / `homepage` / `bugs` metadata is not filled in yet.
-- Host half still reports a stale internal version string (`lib/index.js`).
+
+## [0.2.3] — 2026-10-14
+
+### Fixed
+
+- **The rename to `dsh-skill-cockpit` had missed the plugin's own identity, so the entry failed to
+  activate.** `lib/client.js` registered its bundle as `dsh-skill-panel` and `lib/index.js` exported
+  `name = 'dsh-skill-panel'`, while the package — and therefore the loader entry — is
+  `dsh-skill-cockpit`. A client bundle must register under its package name: the host normalizes
+  both `<package>/client` and the bare package name onto the same graph row. The registration id and
+  the exported name now match the package, and the two test assertions that pinned the old name were
+  updated.
+- The host half reported a stale internal version string (`0.1.0` while the package was `0.2.2`);
+  it now reports the package version.
+
+### Note
+
+- A leftover `node_modules` link under the old name lets the same bundle execute twice and aborts web
+  boot (`duplicate factory registration`). Renaming a `link:` dependency therefore means rebuilding
+  the link **and removing the old one**.
 
 ## [0.2.2] — 2026-10-08
 
