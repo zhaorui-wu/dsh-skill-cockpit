@@ -161,7 +161,7 @@ function makeCtx(declared = true) {
 const react = makeReact();
 const exports_ = await loadBundle(react);
 
-check('client bundle 通过 __ModuleLoader__ 注册了自己', captured?.id === 'dsh-skill-panel', captured?.id);
+check('client bundle 通过 __ModuleLoader__ 注册了自己', captured?.id === 'dsh-skill-cockpit', captured?.id);
 check('factory 返回 apply 函数', typeof exports_?.apply === 'function');
 check(
   'factory 声明 inject: ["slots"]（官方扩展点，不再依赖 betterSidebar）',
