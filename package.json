@@ -27,6 +27,7 @@
     "lib",
     "locale",
     "test",
+    "!test/out",
     "cordis.patch.yml",
     "README.md"
   ],
